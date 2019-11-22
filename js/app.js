@@ -19,7 +19,13 @@ function Shop(location, address, phone, hours) {
   this.phone = phone;
   this.hours = hours;
   this.flavors = [];
+  this.getFlavor();
 }
+
+Shop.prototype.getFlavor = function(){
+  this.flavors.push(saltedCaremel);
+  this.flavors.push(honeylavender);
+};
 
 
 // TEST - just hard coded
@@ -37,4 +43,6 @@ console.log('capitolHill :', capitolHill);
 
 var belltown = new Shop('Belltown', '2101 7th Ave, Seattle, WA 98119', '(206) 900-8770', '10AM - 10PM');
 console.log('belltown :', belltown);
+
+
 
