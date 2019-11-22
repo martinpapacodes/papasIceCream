@@ -1,2 +1,2 @@
 # papasIceCream
-Group project foe code 201
+Group project for code 201
