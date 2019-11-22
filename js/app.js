@@ -19,7 +19,13 @@ function Shop(location, address, phone, hours) {
   this.phone = phone;
   this.hours = hours;
   this.flavors = [];
+  this.getFlavor();
 }
+
+Shop.prototype.getFlavor = function(){
+  this.flavors.push(saltedCaremel);
+  this.flavors.push(honeylavender);
+};
 
 
 // TEST - just hard coded
@@ -36,5 +42,15 @@ var capitolHill = new Shop('Capitol Hill', '1400 12th Ave, Seattle, WA 98122', '
 console.log('capitolHill :', capitolHill);
 
 var belltown = new Shop('Belltown', '2101 7th Ave, Seattle, WA 98119', '(206) 900-8770', '10AM - 10PM');
+console.log('belltown :', belltown);
+
+
+function addSpecialFlavor(shopLocation) {
+  console.log('***belltown :', shopLocation.flavors);
+  var freshMint = new IceCream('Fresh Mint', 'Like those Girl Scout cookies everyone loves, but with ice cream. We use locally grown heirloom mint and house-baked cookies, of course!', 'Rbst-free fresh cream & milk, organic sugar, Rbst-free dry milk, egg yolks, fresh organic mint, natural peppermint oil, locust bean gum.', false, 10.50);
+  shopLocation.flavors.push(freshMint);
+}
+
+addSpecialFlavor(belltown);
 console.log('belltown :', belltown);
 
